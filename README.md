@@ -16,14 +16,6 @@ O projeto simula o jogo Batalha Naval em um tabuleiro 10x10. O jogador pode disp
 
   
 
-### Modos de jogo / Menu:
-- Jogador vs Jogador
-- Jogador vs Máquina
-  
-Na tela de menu é possível escolher qual modo de jogo deseja jogar. Em ambos os modos o jogador pode escolher onde posicionar suas frotas e onde atirar, no modo jogador vs máquina as ações da máquina são de maneira aleatória. 
-
-<img width="304" height="127" alt="image" src="https://github.com/user-attachments/assets/98a7eab7-2291-4011-90fc-e185ea55b57e" />
-
 ## Como utilizar a lista: 
 
 1. Execute o projeto
