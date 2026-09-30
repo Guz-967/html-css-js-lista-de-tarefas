@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <header id="intro">
+        <h1>Lista de Tarefas</h1>
+        <p>Sua lista atual:</p>
+        
+    </header>
+
+    <section id="listaExibida">
+        <span id="textoNav">Filtrar tarefas:</span>
+        <nav id="navLinks">
+            <ul id="listaNav">
+                <li class="filtros" checked onclick="filtrarTarefasTodas()">Todas</li>
+                <li class="filtros" onclick="filtrarTarefasPendentes()">Pendentes</li>
+                <li class="filtros" onclick="filtrarTarefasConcluidas()">Concluídas</li>
+                <li id="separadorNav">|</li>
+                <!--FILTRAR POR PRIORIDADE-->
+                <li class="highPriorityNav"  onclick="filtrarTarefasAltas()">Alta</li>
+                <li class="mediumPriorityNav" onclick="filtrarTarefasMedias()">Média</li>
+                <li class="lowPriorityNav" onclick="filtrarTarefasBaixas()">Baixa</li>
+            </ul>
+        </nav>
+        <ul id="listaT">
+            <li id="semTarefa">Sua lista não tem nenhuma tarefa no momento.</li>
+        </ul>
+
+    </section>
+    
+    <section id="formulario">
+        <p>Digite a  descrição da tarefa que você quer adicionar dentro da lista</p>
+        <input type="text" placeholder="Ex: Treinar às 15:00" id="descricao">
+        <p>Escolha o nível de prioridade da tarefa que você vai adicionar</p>
+    
+        <div class="niveis">
+            <div>
+                <input type="radio" id="baixaRadio" name="escolha" value="Baixa" checked>
+                <label for="baixaRadio">Baixa</label>
+            </div>
+
+            <div>
+                <input type="radio" id="mediaRadio" name="escolha" value="Média">
+                <label for="mediaRadio" class="media">Média</label>
+            </div>
+
+            <div>
+                <input type="radio" id="altaRadio" name="escolha" value="Alta">
+                <label for="altaRadio">Alta</label>
+            </div>
+        </div>
+        <div class="butao">
+            <button id="adicionarDesc">+ Adicionar Tarefa</button>
+        </div>
+    </section>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>

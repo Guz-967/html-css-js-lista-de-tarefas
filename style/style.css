@@ -1,0 +1,281 @@
+.riscado{
+    text-decoration: line-through;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*ALTERANDO A LISTA */
+#listaExibida{
+    padding-left: 10px;
+    border: 1px solid rgb(240, 242, 246);
+    border-radius: 12px;
+    background-color: rgba(248, 249, 251);
+    box-shadow: 2px 3px 10px rgb(152, 154, 156);
+}
+#formulario{
+    border: 1px solid rgb(240, 242, 246);
+    border-radius: 12px;
+    box-shadow: 2px 3px 12px rgb(81, 83, 83);
+    background-color: rgba(248, 249, 251);
+    padding-left: 12px;
+    padding-top: 5px;
+    margin: 15px 0px;
+}
+/*INPUT PARA DIGITAR A DESCRIÇÃO*/
+#descricao{
+    border-radius: 7px;
+    height: 30px;
+    width: 96%; /*ALTERAR DEPOIS PARA FICAR COM A LARGURA DA SEÇÃO*/
+    border: 1px solid rgb(222, 224, 226);
+    padding: 5px;
+    padding-left: 15px;
+}
+#descricao::placeholder{
+    color: rgb(165, 168, 170);
+}
+#listaT{
+    list-style: none;
+    padding: 0px;
+}
+
+.customCheckbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid rgb(213, 215, 219);
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.customCheckbox:checked::before{
+    content: "✔";
+    color: white;
+    background-color: #306cf3;
+}
+
+/*PARTE NAV BAR*/
+#listaNav{ 
+    display: inline-flex;
+    list-style: none;
+    width: 200px;
+    gap: 20px;
+}
+#textoNav{
+    display: inline-block;
+    margin-left: 10px;
+}
+#navLinks{
+    display: inline-flex;
+}
+#separadorNav{
+    font-size: x-large;
+    color: rgb(213, 215, 219);
+}
+.highPriorityNav{
+    font-size: 14px;
+    font-weight: bold;
+    color: #b93a3b;
+    border: 1px solid #fac5ca;
+    border-radius: 5px;
+    background-color: #feeded;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.mediumPriorityNav{
+    font-size: 14px;
+    font-weight: bold;
+    color: #a66d32;
+    border: 1px solid rgb(231, 198, 115);
+    border-radius: 5px;
+    background-color: #faf1da;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.lowPriorityNav{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #408637;
+    border: 1px solid rgb(192, 223, 192);
+    border-radius: 5px;
+    background-color: #eaf7ea;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.highPriorityNav:hover, 
+.mediumPriorityNav:hover,
+.lowPriorityNav:hover
+{
+    opacity: 65%;
+}
+.filtros{
+    border: 1px solid rgb(231, 233, 236);
+    border-radius: 5px;
+    padding: 10px 22px;
+}
+.filtros:hover{
+    color: white;
+    background-color: #306cf3;
+    cursor: pointer;
+}
+/*PARTE DOS RADIOS DE PRIORIDADE*/
+.niveis{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.butao{
+    padding-bottom: 12px;
+}
+/*FAZER UM MODO CLARO E UM MODO ESCURO*/
+/*CUSTOMIZAÇÃO PARA AS TAREFAS DENTRO DA LISTA*/
+.tasks{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(213, 215, 219);
+    box-shadow: 2px 3px 10px rgb(204, 205, 209);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.taskLow{
+    border-left: 4px solid green;
+}
+
+.taskMedium{
+    border-left: 4px solid goldenrod;
+}
+
+.taskHigh{
+    border-left: 4px solid red;
+}
+/*ALTERANDO BOTÃO DE EXCLUIR TAREFA*/
+
+.botaoExcluirTarefa{
+    border: 1px solid red;
+    /*background-color: rgb(197, 159, 159);*/
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url("/img/51eab674-5e8d-4eab-8b80-577b22c01745.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+}
+
+/*ALTERANDO AS CORES DAS PRIORIDADES*/
+.lowPriorityEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #408637;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: #eaf7ea;
+    padding: 5px 9px;
+    margin-right: 10px;
+}
+.mediumPriorityEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #a66d32;
+    border: 1px solid rgb(231, 198, 115);
+    border-radius: 5px;
+    background-color: #faf1da;
+    padding: 5px 9px;
+    margin-right: 10px;
+}
+.highPriorityEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #b93a3b;
+    border: 1px solid #fac5ca;
+    border-radius: 5px;
+    background-color: #feeded;
+    padding: 5px 9px;
+    margin-right: 10px;
+}
+/*BOTÃO DE ADICIONAR TAREFA*/
+#adicionarDesc{
+    background-color: #306cf3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    word-spacing: 4px;
+    cursor: pointer;
+}
+#adicionarDesc:hover{
+    background-color: #5b88f1;
+}
+/*ALTERANDO OS RADIO BUTTONS DA ESCOLHA DA PRIORIDADE*/
+#baixaRadio{
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid green;
+    border-radius: 10px;
+    /*IMPLEMENTAR MUDANÇA DE COR 
+    AO CLICAR/SEGURAR O RADIO BUTTON*/
+}
+#baixaRadio:hover{
+    border-color: rgb(117, 240, 117);
+}
+#baixaRadio:hover:checked{
+    background-color: rgb(117, 240, 117);
+}
+#baixaRadio:checked{
+    background-color: green;
+    border: 1px solid rgb(5, 80, 5);
+}
+#mediaRadio{
+    accent-color: yellow;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+}
+#mediaRadio:hover{
+    border-color: rgb(236, 199, 104);
+}
+#mediaRadio:hover:checked{
+    background-color: rgb(236, 199, 104);
+}
+#mediaRadio:checked{
+    background-color: goldenrod;
+    border: 1px solid rgb(170, 130, 27);
+}
+#altaRadio{
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+#altaRadio:hover{
+    border-color: rgb(241, 145, 145);
+}
+#altaRadio:hover:checked{
+    background-color: rgb(241, 145, 145);
+}
+#altaRadio:checked{
+    background-color: red;
+    border: 1px solid rgb(95, 7, 7);
+}
+
+/*
+input[name="escola"][value="Media"]{
+    
+}
+input[name="escola"][value="Alta"]{
+    
+}*/
