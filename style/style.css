@@ -181,7 +181,7 @@ body{
     border-radius: 5px;
     background-color: #eaf7ea;
     padding: 5px 9px;
-    margin-right: 10px;
+    margin: 0px 10px;
 }
 .mediumPriorityEl{
     font-size: 14px;
@@ -191,7 +191,7 @@ body{
     border-radius: 5px;
     background-color: #faf1da;
     padding: 5px 9px;
-    margin-right: 10px;
+    margin: 0px 10px;
 }
 .highPriorityEl{
     font-size: 14px;
@@ -201,7 +201,7 @@ body{
     border-radius: 5px;
     background-color: #feeded;
     padding: 5px 9px;
-    margin-right: 10px;
+    margin: 0px 10px;
 }
 /*BOTÃO DE ADICIONAR TAREFA*/
 #adicionarDesc{
