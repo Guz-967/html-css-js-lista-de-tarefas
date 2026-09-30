@@ -1,33 +1,32 @@
-# Lista de Tarefas (em desenvolvimento
+# Lista de Tarefas (em desenvolvimento)
 
-Projeto desenvolvido em Java com o objetivo de praticar lógica de programação, modularização por funções, matrizes, vetores, estruturas de repetição e condicionais por meio da implementação do clássico jogo Batalha Naval em modo console.
+Projeto desenvolvido utilizando HTML, CSS e JavaScript com o objetivo de criar uma aplicação CRUD aplicando conceitos como manipulação do DOM, POO, vetor de objetos, entradas de usuário, armazenamento local, estruturas de controle e modularização.
 
 ## Sobre o Projeto
-O projeto simula o jogo Batalha Naval em um tabuleiro 10x10. O jogador pode disputar partidas contra outro jogador ou contra a máquina, posicionando sua frota e realizando ataques até destruir todos os navios adversários.
+O projeto consiste em uma lista de tarefas dinâmica, na qual o usuário pode adicionar tarefas, definir sua prioridade, marcá-las como concluídas e excluí-las. Também estão sendo desenvolvidos recursos de filtragem e armazenamento local das tarefas.
 
-### Funcionalidades:
 
-- Organização das tarefas em tempo real;;
-- Sistema de filtros de tarefas;
+- Adição e exibição das tarefas em tempo real;
+- Sistema de filtros de tarefas (em desenvolvimento);
 - Escolha do nível de prioridade;
-- Possibilidade de exclusão da tarefa;
-- Marcar tarefas concluídas;
-- Armazenamento no LocalStorage (funcionalidade futura)
+- Exclusão da tarefa;
+- Marcação de tarefas como concluídas;
+- Armazenamento das tarefas no LocalStorage (em desenvolvimento).
 
   
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/c6f313a6-80b2-4beb-b55d-b9f75b460b03" />
 
-## Como utilizar a lista: 
 
-1. Execute o projeto
-2. Escreva a descrição da tarefa
-3. Escolha o nível de prioridade da tarefa
-5. Aperte a tecla enter ou clique no botão "Adicionar Tarefa"
-6. Veja suas tarefas sendo exibidas na tela
-7. Marque as tarefas concluídas, exclua as desnecessárias e filtre suas tarefas como quiser
+## Como utilizar a lista 
 
-<!--COLOCAR AS IMAGENS AQUI
-<img width="425" height="265" alt="image" src="https://github.com/user-attachments/assets/63abb549-0561-45eb-8c06-324c73ef98a8" />
--->
+1. Execute o projeto;
+2. Escreva a descrição da tarefa;
+3. Escolha o nível de prioridade da tarefa;
+4. Pressione a tecla Enter ou clique no botão "Adicionar Tarefa";
+5. Veja suas tarefas sendo exibidas na tela;
+6. Marque as tarefas concluídas e exclua as desnecessárias.
+
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/919131dd-0acc-4b44-8699-946bf9c0422a" />
 
 ## Tecnologias utilizadas:
 - HTML
@@ -36,4 +35,4 @@ O projeto simula o jogo Batalha Naval em um tabuleiro 10x10. O jogador pode disp
 
 ## Autor
 
-Desenvolvido por Gustavo como projeto pessoal para aplicar conceitos e praticar conceitos de programação web.
+Desenvolvido por Gustavo como projeto pessoal para aplicar e praticar conceitos de programação web.
