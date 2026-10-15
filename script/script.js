@@ -1,4 +1,5 @@
-class Tarefa { //Classe para instâncias as tarefas
+//Classe para definir as propriedades dos objetos tarefa
+class Tarefa { 
     static contadorId = 1
     concluida = false
     prioridade = "Baixa"
@@ -9,25 +10,54 @@ class Tarefa { //Classe para instâncias as tarefas
     }
 }
 
-function criarTarefa(descricao) { //Instanciar a tarefa passando a descrição no constructor
+//Função factory para instanciar os objetos tarefa passando a descrição no constructor
+function criarObjetoTarefa(descricao) { 
     let tarefa = new Tarefa(descricao)
     //POSSÍVEL LUGAR PARA SALVAR COM LOCALSTORAGE
     return tarefa
 }
 
-//let opcaoRemover = []
+//Verifica se o usuário pressionou a teclaenter, caso sim, a função
+function pressionarEnter(event) {
+    if (event.key == 'Enter') {
+        verificarCampos()
+    }
 
+}
+
+//Função para verificar se os campos da descrição e radio button estão vazios
+function verificarCampos() {
+    let desc = document.querySelector("#descricao")
+    let prio = document.querySelector('input[name="escolha"]:checked')
+
+    if (desc.value == "") {
+        alert("Descrição inváida")
+    } else if (!prio) {
+        alert("Adicione o nível de prioridade")
+    } else {
+        criarTarefa(desc)
+    }
+}
+//Adicionando o evento click no botao para chamar a função VerificarCampos
+document.querySelector("#adicionarTarefa").addEventListener("click", verificarCampos)
+
+function criarTarefa(desc) {
+    let tarefa = criarObjetoTarefa(desc.value)
+    verificarPrioridade(tarefa)
+    ordenarTarefas(tarefa)
+
+    desc.value = ""
+}
 
 function inserirTarefaDOM(elementoLista, objetoTarefa) { //
 
     if (arrayTarefas.length <= 0) { //Verifica se é a primeira tarefa para remover o parágrafo
-        let sem = document.querySelector('#semTarefa')
+        let sem = document.querySelector('#semTarefasLi')
         sem.remove()
     }
 
     let check = criarCheckbox(objetoTarefa) //Criar um checkbox para a tarefa
     elementoLista.prepend(check)
-    //opcaoRemover.push(elementoLista)
 
     if(objetoTarefa.concluida == true){
         check.checked = true
@@ -73,23 +103,9 @@ function salvarTarefas(tarefa) {
     }
 }
 
-/*
-function reconstruirLista(tarefa) {
-
-    let ul = document.querySelector("#listaT")
-
-    ul.innerHTML = ''
-
-    for (let c = 0; c < arrayTarefas.length; c++) {
-        criarLista(arrayTarefas[c])
-    }
-    
-    alert("Tarefa criada")
-}*/
-
 function reconstruirLista(filtro) {
 
-    let ul = document.querySelector("#listaT")
+    let ul = document.querySelector("#listaTarefas")
 
     ul.innerHTML = ''
 
@@ -105,7 +121,7 @@ function reconstruirLista(filtro) {
 
 function criarLista(tarefa) {
 
-    let ul = document.querySelector("#listaT")
+    let ul = document.querySelector("#listaTarefas")
     let li = document.createElement("li")
     let textoLi = document.createElement("span")
     let nivelPrioridadeEl = document.createElement("span")
@@ -116,17 +132,17 @@ function criarLista(tarefa) {
     switch(tarefa.prioridade){
         case "Baixa":
             nivelPrioridadeEl.innerText = "Baixa"
-            nivelPrioridadeEl.classList.add("lowPriorityEl")
+            nivelPrioridadeEl.classList.add("baixaPrioridadeEl")
             li.classList.add("taskLow")
             break
         case "Média":
             nivelPrioridadeEl.innerText = "Média"
-            nivelPrioridadeEl.classList.add("mediumPriorityEl")
+            nivelPrioridadeEl.classList.add("mediaPrioridadeEl")
             li.classList.add("taskMedium")
             break
         case "Alta":
             nivelPrioridadeEl.innerText = "Alta"
-            nivelPrioridadeEl.classList.add("highPriorityEl")
+            nivelPrioridadeEl.classList.add("altaPrioridadeEl")
             li.classList.add("taskHigh")
             break
         default:
@@ -148,7 +164,7 @@ function criarLista(tarefa) {
 
 
 function excluirTarefa(elementoLista, tarefa) {
-    let ul = document.querySelector("#listaT")
+    let ul = document.querySelector("#listaTarefas")
 
     for (let c = 0; c < arrayTarefas.length; c++) {
         if (arrayTarefas[c] == tarefa) {
@@ -182,24 +198,9 @@ function verificarPrioridade(tarefa) {
     }
 }
 
-function pressionarEnter(event) {
-    if (event.key == 'Enter') {
-        adicionarElementos()
-    }
-
-}
 
 document.querySelector("#descricao").addEventListener('keyup', pressionarEnter)
 
-function adicionarDescricao(desc) {
-
-    let tarefa = criarTarefa(desc.value)
-    verificarPrioridade(tarefa)
-    ordenarTarefas(tarefa)
-
-    desc.value = ""
-
-}
 
 function verificarTarefaFeita(input, elementoLista, tarefa) {
 
@@ -213,19 +214,6 @@ function verificarTarefaFeita(input, elementoLista, tarefa) {
 
 }
 
-function adicionarElementos() {
-
-    let desc = document.querySelector("#descricao")
-    let prio = document.querySelector('input[name="escolha"]:checked')
-
-    if (desc.value == "") {
-        alert("Descrição inváida")
-    } else if (!prio) {
-        alert("Adicione o nível de prioridade")
-    } else {
-        adicionarDescricao(desc)
-    }
-}
 
 //Em desenvolvimento
 function filtrarTarefasTodas(){
@@ -234,7 +222,7 @@ function filtrarTarefasTodas(){
 
 //Em desenvolvimento
 function filtrarTarefasPendentes(){
-    let ul = document.querySelector("#listaT")
+    let ul = document.querySelector("#listaTarefas")
 
     ul.innerHTML = ''
 
@@ -247,4 +235,3 @@ function filtrarTarefasPendentes(){
     
 }
 
-document.querySelector("#adicionarDesc").addEventListener("click", adicionarElementos)

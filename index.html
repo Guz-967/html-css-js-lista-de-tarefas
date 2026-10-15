@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,13 @@
 </head>
 <body>
     
+    <!--Seção de Cabeçalho-->
     <header id="intro">
         <h1>Lista de Tarefas</h1>
         <p>Sua lista atual:</p>
-        
     </header>
 
+    <!--Seção para exibir os filtros e as tarefas-->
     <section id="listaExibida">
         <span id="textoNav">Filtrar tarefas:</span>
         <nav id="navLinks">
@@ -23,22 +24,24 @@
                 <li class="filtros" onclick="filtrarTarefasConcluidas()">Concluídas</li>
                 <li id="separadorNav">|</li>
                 <!--FILTRAR POR PRIORIDADE-->
-                <li class="highPriorityNav"  onclick="filtrarTarefasAltas()">Alta</li>
-                <li class="mediumPriorityNav" onclick="filtrarTarefasMedias()">Média</li>
-                <li class="lowPriorityNav" onclick="filtrarTarefasBaixas()">Baixa</li>
+                <li class="altaPrioridadeNav"  onclick="filtrarTarefasAltas()">Alta</li>
+                <li class="mediaPrioridadeNav" onclick="filtrarTarefasMedias()">Média</li>
+                <li class="baixaPrioridadeNav" onclick="filtrarTarefasBaixas()">Baixa</li>
             </ul>
         </nav>
-        <ul id="listaT">
-            <li id="semTarefa">Sua lista não tem nenhuma tarefa no momento.</li>
+        <ul id="listaTarefas">
+            <li id="semTarefasLi">Sua lista não tem nenhuma tarefa no momento.</li>
         </ul>
-
     </section>
     
+    <!--Seção para adicionar as tarefas-->
+    <!--Escrever a descrição-->
     <section id="formulario">
         <p>Digite a  descrição da tarefa que você quer adicionar dentro da lista</p>
         <input type="text" placeholder="Ex: Treinar às 15:00" id="descricao">
         <p>Escolha o nível de prioridade da tarefa que você vai adicionar</p>
     
+        <!--Selecionar o nível de prioridade-->
         <div class="niveis">
             <div>
                 <input type="radio" id="baixaRadio" name="escolha" value="Baixa" checked>
@@ -55,8 +58,10 @@
                 <label for="altaRadio">Alta</label>
             </div>
         </div>
-        <div class="butao">
-            <button id="adicionarDesc">+ Adicionar Tarefa</button>
+
+        <!--Adicionar a tarefa de fato-->
+        <div class="campoBotao">
+            <button id="adicionarTarefa">+ Adicionar Tarefa</button>
         </div>
     </section>
     

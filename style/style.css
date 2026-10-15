@@ -1,11 +1,10 @@
 .riscado{
     text-decoration: line-through;
-}
-
+} /*Mudar o lugar disso*/
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-/*ALTERANDO A LISTA */
+/*SEÇÃO LISTA*/
 #listaExibida{
     padding-left: 10px;
     border: 1px solid rgb(240, 242, 246);
@@ -34,9 +33,114 @@ body{
 #descricao::placeholder{
     color: rgb(165, 168, 170);
 }
-#listaT{
+#listaTarefas{
     list-style: none;
     padding: 0px;
+}
+/*NAV BAR*/
+#listaNav{ 
+    display: inline-flex;
+    list-style: none;
+    width: 200px;
+    gap: 20px;
+}
+#textoNav{
+    display: inline-block;
+    margin-left: 10px;
+}
+#navLinks{
+    display: inline-flex;
+}
+#separadorNav{
+    font-size: x-large;
+    color: rgb(213, 215, 219);
+}
+.altaPrioridadeNav{
+    font-size: 14px;
+    font-weight: bold;
+    color: #b93a3b;
+    border: 1px solid #fac5ca;
+    border-radius: 5px;
+    background-color: #feeded;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.mediaPrioridadeNav{
+    font-size: 14px;
+    font-weight: bold;
+    color: #a66d32;
+    border: 1px solid rgb(231, 198, 115);
+    border-radius: 5px;
+    background-color: #faf1da;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.baixaPrioridadeNav{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #408637;
+    border: 1px solid rgb(192, 223, 192);
+    border-radius: 5px;
+    background-color: #eaf7ea;
+    padding: 11px 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.altaPrioridadeNav:hover, 
+.mediaPrioridadeNav:hover,
+.baixaPrioridadeNav:hover
+{
+    opacity: 65%;
+}
+.filtros{
+    border: 1px solid rgb(231, 233, 236);
+    border-radius: 5px;
+    padding: 10px 22px;
+}
+.filtros:hover{
+    color: white;
+    background-color: #306cf3;
+    cursor: pointer;
+}
+/*RADIOS DE PRIORIDADE*/
+.niveis{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+/*REGRAS PARA A PRIORIDADE DENTRO DA TAREFA*/
+.baixaPrioridadeEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #408637;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: #eaf7ea;
+    padding: 5px 9px;
+    margin: 0px 10px;
+}
+.mediaPrioridadeEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #a66d32;
+    border: 1px solid rgb(231, 198, 115);
+    border-radius: 5px;
+    background-color: #faf1da;
+    padding: 5px 9px;
+    margin: 0px 10px;
+}
+.altaPrioridadeEl{
+    font-size: 14px;
+    font-weight: bold;
+    color: #b93a3b;
+    border: 1px solid #fac5ca;
+    border-radius: 5px;
+    background-color: #feeded;
+    padding: 5px 9px;
+    margin: 0px 10px;
 }
 
 .customCheckbox{
@@ -55,82 +159,8 @@ body{
     background-color: #306cf3;
 }
 
-/*PARTE NAV BAR*/
-#listaNav{ 
-    display: inline-flex;
-    list-style: none;
-    width: 200px;
-    gap: 20px;
-}
-#textoNav{
-    display: inline-block;
-    margin-left: 10px;
-}
-#navLinks{
-    display: inline-flex;
-}
-#separadorNav{
-    font-size: x-large;
-    color: rgb(213, 215, 219);
-}
-.highPriorityNav{
-    font-size: 14px;
-    font-weight: bold;
-    color: #b93a3b;
-    border: 1px solid #fac5ca;
-    border-radius: 5px;
-    background-color: #feeded;
-    padding: 11px 23px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.mediumPriorityNav{
-    font-size: 14px;
-    font-weight: bold;
-    color: #a66d32;
-    border: 1px solid rgb(231, 198, 115);
-    border-radius: 5px;
-    background-color: #faf1da;
-    padding: 11px 23px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.lowPriorityNav{
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #408637;
-    border: 1px solid rgb(192, 223, 192);
-    border-radius: 5px;
-    background-color: #eaf7ea;
-    padding: 11px 23px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.highPriorityNav:hover, 
-.mediumPriorityNav:hover,
-.lowPriorityNav:hover
-{
-    opacity: 65%;
-}
-.filtros{
-    border: 1px solid rgb(231, 233, 236);
-    border-radius: 5px;
-    padding: 10px 22px;
-}
-.filtros:hover{
-    color: white;
-    background-color: #306cf3;
-    cursor: pointer;
-}
-/*PARTE DOS RADIOS DE PRIORIDADE*/
-.niveis{
-    display: flex;
-    gap: 12px;
-    margin-bottom: 12px;
-}
 
-.butao{
+.campoBotao{
     padding-bottom: 12px;
 }
 /*FAZER UM MODO CLARO E UM MODO ESCURO*/
@@ -172,39 +202,8 @@ body{
     margin-left: auto;
 }
 
-/*ALTERANDO AS CORES DAS PRIORIDADES*/
-.lowPriorityEl{
-    font-size: 14px;
-    font-weight: bold;
-    color: #408637;
-    border: 1px solid green;
-    border-radius: 5px;
-    background-color: #eaf7ea;
-    padding: 5px 9px;
-    margin: 0px 10px;
-}
-.mediumPriorityEl{
-    font-size: 14px;
-    font-weight: bold;
-    color: #a66d32;
-    border: 1px solid rgb(231, 198, 115);
-    border-radius: 5px;
-    background-color: #faf1da;
-    padding: 5px 9px;
-    margin: 0px 10px;
-}
-.highPriorityEl{
-    font-size: 14px;
-    font-weight: bold;
-    color: #b93a3b;
-    border: 1px solid #fac5ca;
-    border-radius: 5px;
-    background-color: #feeded;
-    padding: 5px 9px;
-    margin: 0px 10px;
-}
 /*BOTÃO DE ADICIONAR TAREFA*/
-#adicionarDesc{
+#adicionarTarefa{
     background-color: #306cf3;
     color: white;
     padding: 10px;
@@ -213,7 +212,7 @@ body{
     word-spacing: 4px;
     cursor: pointer;
 }
-#adicionarDesc:hover{
+#adicionarTarefa:hover{
     background-color: #5b88f1;
 }
 /*ALTERANDO OS RADIO BUTTONS DA ESCOLHA DA PRIORIDADE*/
